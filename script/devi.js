@@ -1,7 +1,7 @@
 $(document).ready(function()
 		
 { 
-	var ul=[];	
+	
 	$("#btnSubmit").click(function()
 	{
      
@@ -46,20 +46,8 @@ var tot=c/tarea; //no of tiles
 console.log(tot);
 var rw=(((tot*(ra/100))+tot));
 var rwas=Math.ceil(rw);
-ul.push(rwas);
-console.log(ul);
-var ml=document.getElementById("result");
-ml.innerHTML="";
+document.getElementById("result").innerText=""+rwas;
 
-for(var i=0;i<ul.length;i++)
-{ 
-	console.log(ul[i]);
- 
-	ml.innerHTML+=ul[i];
-	var c=ul[i]+ul[i];
-	alert(c);
-
-}
 //var g=tot*p;//gout area
 //var rem=c-g;//room groud
 //var final=rem/tarea;
