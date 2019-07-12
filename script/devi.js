@@ -227,7 +227,7 @@ else if(document.getElementById("productTypeSelect").value=="Tile"&& (document.q
 var tott=stot/ta;
 
 var swaste=((tott*(ra/100))+tott);
-console.log(swaste);
+
 var sw=Math.ceil(swaste);
 document.getElementById("result").innerText=""+sw;
 
