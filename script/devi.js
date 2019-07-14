@@ -28,6 +28,7 @@ $(document).ready(function()
 			var tlen=parseInt(e)+parseFloat(e1/12);
 			var tarea=Math.floor((twid*tlen));
 var tot=c/tarea; //no of tiles
+
 var rw=(((tot*(ra/100))+tot));//adding wastage
 var rwas=Math.ceil(rw);
 $("#btnSubmit").dblclick(function()
