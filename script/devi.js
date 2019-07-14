@@ -47,22 +47,23 @@ console.log(tot);
 var rw=(((tot*(ra/100))+tot));
 var rwas=Math.ceil(rw);
 document.getElementById("result").innerText=""+rwas;
-
-//var g=tot*p;//gout area
-//var rem=c-g;//room groud
-//var final=rem/tarea;
-//var round=Math.floor(final);
-//var last = rem%tarea;
-//if(last==1||last<tarea)
-//{
-//	round++;
-//	document.getElementById("result").innerText=""+round;
-//}
-//else
-//{
-//	document.getElementById("result").innerText=""+round;
-//	console.log(round);
-//}
+// Here below are grout details it will printed in console 
+var g=tot*p;//grout area
+var rem=c-g;//room groud
+var final=rem/tarea;
+var round=Math.floor(final);
+var last = rem%tarea;
+if(last==1||last<tarea)
+{
+	round++;
+	document.getElementById("result").innerText=""+round;
+	console.log(round);
+}
+else(last==0)
+{
+	document.getElementById("result").innerText=""+round;
+	console.log(round);
+}
 } 
 else if( document.getElementById("productTypeSelect").value=="Tile"&& (document.querySelectorAll(".room-section .LShapeRoomItem ").length)|| (document.querySelectorAll('.room-section .convexRoomItem').length))
 			
