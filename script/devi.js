@@ -5,10 +5,7 @@ $(document).ready(function()
 	$("#btnSubmit").click(function()
 	{
      
-	
-
-
-		if($(".room-section").html()==0)
+	if($(".room-section").html()==0)
        
         
 		{
@@ -46,9 +43,16 @@ var tot=c/tarea; //no of tiles
 console.log(tot);
 var rw=(((tot*(ra/100))+tot));
 var rwas=Math.ceil(rw);
+$("#btnSubmit").dblclick(function()
+{
+	total =rwas+rwas;
+	alert("Addition"+total);
+	
+});
 document.getElementById("result").innerText=""+rwas;
 
-//var g=tot*p;//gout area
+
+//var g=tot*p;//grout area
 //var rem=c-g;//room groud
 //var final=rem/tarea;
 //var round=Math.floor(final);
