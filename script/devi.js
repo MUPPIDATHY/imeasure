@@ -3,15 +3,7 @@ $(document).ready(function()
 { 
 	$("#btnSubmit").click(function()
 	{
-<<<<<<< HEAD
-     
-	if($(".room-section").html()==0)
-       
-        
-=======
 		if($(".room-section").html()==0)
-         
->>>>>>> c8e832cff08ea921399aa3c5755a8aa683b96cd5
 		{
 			alert('click anyone');
 		}
@@ -39,32 +31,9 @@ var rw=(((tot*(ra/100))+tot));//adding wastage
 var rwas=Math.ceil(rw);
 $("#btnSubmit").dblclick(function()
 {
-<<<<<<< HEAD
+
 	total =rwas+rwas;
-	alert("Adding two "+total);
-});
-document.getElementById("result").innerText=""+rwas;
-
-
-//var g=tot*p;//grout area
-//var rem=c-g;//room groud
-//var final=rem/tarea;
-//var round=Math.floor(final);
-//var last = rem%tarea;
-//if(last==1||last<tarea)
-//{
-//	round++;
-//	document.getElementById("result").innerText=""+round;
-//}
-//else
-//{
-//	document.getElementById("result").innerText=""+round;
-//	console.log(round);
-//}
-} 
-=======
-	r=rwas+rwas;
-	alert("total"+r);//adding another one
+	alert("Adding two "+total);//double click means it will be added ..,,
 });
 document.getElementById("result").innerText=""+rwas;
 // Here below details are adding grout it will be printed in console ,..
@@ -85,7 +54,7 @@ else(last==0)
 	console.log(round);
 }
 }
->>>>>>> c8e832cff08ea921399aa3c5755a8aa683b96cd5
+
 else if( document.getElementById("productTypeSelect").value=="Tile"&& (document.querySelectorAll(".room-section .LShapeRoomItem ").length)|| (document.querySelectorAll('.room-section .convexRoomItem').length))
 			
 {
@@ -120,7 +89,6 @@ var gl=tott*pl;//gout area
 var reml=tl-gl;
 var finl=reml/ta;
 var roundd=Math.floor(finl);
-
 var lastt = reml%ta;
 if(lastt==1||lastt<ta)
 {
@@ -128,7 +96,7 @@ if(lastt==1||lastt<ta)
 	console.log(roundd);
 //	document.getElementById("result").innerText=""+roundd;
 }
-else
+else(lastt==0)
 {
 //	document.getElementById("result").innerText=""+roundd;
 	console.log(roundd);
@@ -163,8 +131,8 @@ var toott=tl/ta; //no of tiles
 console.log(toott);
 var cwaste=((toott*(ra/100))+toott);//add waston
 var cw=Math.ceil(cwaste);
-console.log(cw);
-// Here below details are adding grout it will be printed in console ,..
+document.getElementById('result').innerHTML=""+cw;
+// Here below details are adding grout  it will be printed in console ,..
 var gl=tott*pl;//gout area
 var reml=tl-gl;
 var finl=reml/ta;
