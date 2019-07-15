@@ -46,8 +46,7 @@ var rwas=Math.ceil(rw);
 $("#btnSubmit").dblclick(function()
 {
 	total =rwas+rwas;
-	alert("Addition"+total);
-	
+	alert("Adding two "+total);
 });
 document.getElementById("result").innerText=""+rwas;
 
