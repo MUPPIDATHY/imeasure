@@ -71,7 +71,8 @@ else if( document.getElementById("productTypeSelect").value=="Tile"&& (document.
 	var l3=parseInt(lsw2)+parseFloat(ilsw2/12);
 	var l4=parseInt(lsl2)+parseFloat(ilsl2/12); 
 	var tl=Math.ceil((l1*l2)+(l3*l4));
-    var dl=$(".product-info.hidden.active  .imperialDiv").find("input,select")[0].value; 
+
+    var dl=$(" .product-info.hidden.active  .imperialDiv").find("input,select")[0].value; 
 	var dl1=$(".product-info.hidden.active .imperialDiv").find("input,select")[1].value;           
 	var el=$(".product-info.hidden.active .imperialDiv").find("input,select")[2].value; 
 	var el1=$(".product-info.hidden.active .imperialDiv").find("input,select")[3].value; 
@@ -81,24 +82,25 @@ else if( document.getElementById("productTypeSelect").value=="Tile"&& (document.
 	var tlent=parseInt(el)+parseFloat(el1/12);
 	var ta=Math.floor(twidh*tlent);
 var tott=tl/ta; //no of tiles
-var xw=((tott*(ra/100))+tott);//adding wastage
-var xwas=Math.ceil(xw);
-document.getElementById("result").innerText=""+xwas;
+//var xw=((tott*(ra/100))+tott);//adding wastage
+//var xwas=Math.ceil(xw);
+//document.getElementById("result").innerText=""+xwas;
 // Here below details are adding grout it will be printed in console ,..
 var gl=tott*pl;//gout area
 var reml=tl-gl;
 var finl=reml/ta;
 var roundd=Math.floor(finl);
 var lastt = reml%ta;
-if(lastt==1||lastt<ta)
+if(lastt==0)
+{
+	
+	console.log(roundd);
+//document.getElementById("result").innerText=""+roundd;
+}
+else
 {
 	roundd++;
-	console.log(roundd);
-//	document.getElementById("result").innerText=""+roundd;
-}
-else(lastt==0)
-{
-//	document.getElementById("result").innerText=""+roundd;
+	//document.getElementById("result").innerText=""+roundd;
 	console.log(roundd);
 }}
 else if(document.getElementById("productTypeSelect").value=="Tile"&&(document.querySelectorAll(" .room-section .concaveRoomItem").length))
@@ -128,26 +130,26 @@ else if(document.getElementById("productTypeSelect").value=="Tile"&&(document.qu
 	var tlent=parseInt(el)+parseFloat(el1/12);
 	var ta=Math.floor(twidh*tlent);
 var toott=tl/ta; //no of tiles
-console.log(toott);
 var cwaste=((toott*(ra/100))+toott);//add waston
 var cw=Math.ceil(cwaste);
 document.getElementById('result').innerHTML=""+cw;
 // Here below details are adding grout  it will be printed in console ,..
-var gl=tott*pl;//gout area
+var gl=toott*pl;//gout area
 var reml=tl-gl;
 var finl=reml/ta;
-var roundd=Math.floor(finl);
+var roun=Math.floor(finl);
 var lastt = reml%ta;
+console.log(lastt);
 if(lastt==1||lastt<ta)
 {
-	roundd++;
-	console.log(roundd);
+	roun++;
+	console.log(roun);
 //	document.getElementById("result").innerText=""+roundd;
 }
-else(lastt==0)
+else
 {
 	//document.getElementById("result").innerText=""+roundd;
-    console.log(roundd);
+    console.log(roun);
 }
 }
 else if(document.getElementById("productTypeSelect").value=="Tile"&& (document.querySelectorAll(".room-section .stairItem").length))
